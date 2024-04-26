@@ -39,7 +39,7 @@ fun MainScreen(navController: NavController, viewModel: MainViewModel) {
         LazyColumn(
             modifier = Modifier.padding(6.dp)
         ) {
-            items(allMovies.take(10)){ item ->
+            items(allMovies){ item ->
                 MoviesItem(item = item, navController = navController)
             }
         }
