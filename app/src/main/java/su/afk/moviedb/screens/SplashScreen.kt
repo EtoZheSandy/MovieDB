@@ -22,11 +22,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import kotlinx.coroutines.delay
+import su.afk.moviedb.MainViewModel
 import su.afk.moviedb.navigation.Screens
 import su.afk.moviedb.ui.theme.MovieDBTheme
 
 @Composable
-fun SplashScreen(navController: NavController) {
+fun SplashScreen(navController: NavController, viewModel: MainViewModel) {
     var startAnimate by remember {
         mutableStateOf(false)
     }
@@ -36,6 +37,7 @@ fun SplashScreen(navController: NavController) {
     )
     LaunchedEffect(key1 = true) {
         startAnimate = true
+        viewModel.getAllMovies() // загружаем все фильмы пока идет slash скрин
         delay(4000)
         navController.navigate(Screens.Main.route)
     }
