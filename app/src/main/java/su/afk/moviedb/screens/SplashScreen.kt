@@ -33,12 +33,12 @@ fun SplashScreen(navController: NavController, viewModel: MainViewModel) {
     }
     val alphaAnimation = animateFloatAsState(
         targetValue = if (startAnimate) 1f else 0f,
-        animationSpec = tween(durationMillis = 3000)
+        animationSpec = tween(durationMillis = 2000)
     )
     LaunchedEffect(key1 = true) {
         startAnimate = true
         viewModel.getAllMovies() // загружаем все фильмы пока идет slash скрин
-        delay(4000)
+        delay(2000)
         navController.navigate(Screens.Main.route)
     }
     Splash(alpha = alphaAnimation.value)
