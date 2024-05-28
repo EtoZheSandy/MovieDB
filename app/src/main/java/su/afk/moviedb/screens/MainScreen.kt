@@ -31,7 +31,7 @@ import java.nio.file.WatchEvent
 @Composable
 fun MainScreen(navController: NavController, viewModel: MainViewModel) {
     val allMovies = viewModel.allMovies
-        .observeAsState(listOf()).value //передали дефф пустой лист на случай ошибки
+        .observeAsState(listOf()).value
 
     Surface(modifier = Modifier
         .fillMaxSize()
