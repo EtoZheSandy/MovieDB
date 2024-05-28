@@ -1,8 +1,9 @@
 # Movie DB
 
 <p float="left">
-  <img src="./gitDock/1.png" width="35%" />
-  <img src="./gitDock/2.png" width="35%" />
+  <img src="./gitDock/1.png" width="30%" />
+  <img src="./gitDock/2.png" width="30%" />
+  <img src="./gitDock/3.png" width="30%" />
 </p>
 
 ## Приложение для поиска фильмов (soon)
